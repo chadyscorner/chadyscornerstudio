@@ -15,6 +15,7 @@
     body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--mono);overflow-x:hidden}
     body::selection{background:var(--acid);color:var(--ink)}
     a{color:inherit}img,video{display:block;max-width:100%}button{font:inherit}
+    @media(pointer:fine){body.cursor-enabled,body.cursor-enabled a,body.cursor-enabled button,body.cursor-enabled .project{cursor:none}.custom-cursor{position:fixed;left:0;top:0;z-index:1000;width:18px;height:18px;border-radius:999px;background:var(--cream);border:1px solid rgba(18,16,13,.18);box-shadow:0 0 22px rgba(0,0,0,.18);pointer-events:none;opacity:0;transform:translate(-50%,-50%);transition:width .22s ease,height .22s ease,background .22s ease,border-color .22s ease,opacity .18s ease}.custom-cursor span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.88);opacity:0;color:var(--ink);font-family:var(--display);font-size:.68rem;font-weight:700;text-transform:uppercase;white-space:nowrap;transition:opacity .16s ease,transform .16s ease}.custom-cursor.is-visible{opacity:1}.custom-cursor.is-hover{width:78px;height:78px;background:rgba(255,253,244,.9);border-color:rgba(255,253,244,.6)}.custom-cursor.is-hover span{opacity:1;transform:translate(-50%,-50%) scale(1)}.custom-cursor.is-down{width:58px;height:58px}.custom-cursor.is-light{background:rgba(18,16,13,.86);border-color:rgba(18,16,13,.2)}.custom-cursor.is-light span{color:var(--cream)}}
     .shell{width:min(calc(100% - 32px),var(--max));margin-inline:auto}
     body.intro-lock{overflow:hidden}
     .intro-loader{position:fixed;inset:0;z-index:999;display:grid;place-items:center;overflow:hidden;background:var(--ink);color:var(--cream);pointer-events:none}
@@ -77,6 +78,7 @@
   </style>
 </head>
 <body class="intro-lock">
+  <div class="custom-cursor" aria-hidden="true"><span></span></div>
   <div class="intro-loader" aria-hidden="true">
     <div class="intro-inner">
       <img class="intro-logo" src="assets/brand/for-web-sites-logo.png" alt="">
@@ -114,7 +116,7 @@
         </div>
       </div>
       <div class="hero-media" data-reveal>
-        <div class="showreel" aria-label="Silent video showreel">
+        <div class="showreel" aria-label="Silent video showreel" data-cursor="Showreel">
           <video class="showreel-video is-active" src="assets/videos/obey-af-final-insta.mp4" muted playsinline preload="metadata" loop></video><video class="showreel-video" src="assets/videos/waly-final.mp4" muted playsinline preload="metadata" loop></video><video class="showreel-video" src="assets/videos/main-video-9x16.mp4" muted playsinline preload="metadata" loop></video><video class="showreel-video" src="assets/videos/video-ho99o9.mp4" muted playsinline preload="metadata" loop></video><video class="showreel-video" src="assets/videos/into-t-1_5.mp4" muted playsinline preload="metadata" loop></video>
         </div>
       </div>
@@ -125,7 +127,7 @@
     <section id="work" class="shell">
       <div class="section-head" data-reveal><p class="label">Work</p><div><h2>A selection of projects where sound becomes a brand asset.</h2><p>Each video explores a different way to make a brand, content piece or experience more recognizable through sound, texture and rhythm.</p></div></div>
       <div class="work-grid">
-        <article class="project wide" data-reveal>
+        <article class="project wide" data-reveal data-cursor="View">
           <video src="assets/videos/obey-af-final-insta.mp4" muted playsinline preload="metadata" loop></video>
           <div class="project-info">
             <div class="client-name">OBEY x Almost Free Services</div>
@@ -134,12 +136,12 @@
             <p>An audiovisual piece shaped through rhythm, texture and sonic impact to strengthen brand presence.</p>
             <div class="project-tags"><span class="tag">Original Composition</span><span class="tag">Sound design</span><span class="tag">Audiovisual Direction</span></div>
             <div class="video-controls">
-              <button class="play" type="button" data-play>Play</button>
-              <button class="sound" type="button" data-sound>Enable Sound</button>
+              <button class="play" type="button" data-play data-cursor="Play">Play</button>
+              <button class="sound" type="button" data-sound data-cursor="Play with sound">Enable Sound</button>
               <span class="time">00:00</span>
             </div>
           </div>
-        </article><article class="project wide" data-reveal>
+        </article><article class="project wide" data-reveal data-cursor="View">
           <video src="assets/videos/waly-final.mp4" muted playsinline preload="metadata" loop></video>
           <div class="project-info">
             <div class="client-name">Extended Family</div>
@@ -148,12 +150,12 @@
             <p>Rhythm, texture and pacing extend the material of the track to create a sensitive, organic identity.</p>
             <div class="project-tags"><span class="tag">Sound Direction</span><span class="tag">Motion Design</span><span class="tag">Sensory Storytelling</span></div>
             <div class="video-controls">
-              <button class="play" type="button" data-play>Play</button>
-              <button class="sound" type="button" data-sound>Enable Sound</button>
+              <button class="play" type="button" data-play data-cursor="Play">Play</button>
+              <button class="sound" type="button" data-sound data-cursor="Play with sound">Enable Sound</button>
               <span class="time">00:00</span>
             </div>
           </div>
-        </article><article class="project " data-reveal>
+        </article><article class="project " data-reveal data-cursor="View">
           <video src="assets/videos/main-video-9x16.mp4" muted playsinline preload="metadata" loop></video>
           <div class="project-info">
             <div class="client-name">HOKA</div>
@@ -162,12 +164,12 @@
             <p>Framing, edit rhythm and sonic energy build a sharp, modern and memorable brand presence.</p>
             <div class="project-tags"><span class="tag">Campaign Content</span><span class="tag">Brand Sound</span><span class="tag">Social Format</span></div>
             <div class="video-controls">
-              <button class="play" type="button" data-play>Play</button>
-              <button class="sound" type="button" data-sound>Enable Sound</button>
+              <button class="play" type="button" data-play data-cursor="Play">Play</button>
+              <button class="sound" type="button" data-sound data-cursor="Play with sound">Enable Sound</button>
               <span class="time">00:00</span>
             </div>
           </div>
-        </article><article class="project tall" data-reveal>
+        </article><article class="project tall" data-reveal data-cursor="View">
           <video src="assets/videos/video-ho99o9.mp4" muted playsinline preload="metadata" loop></video>
           <div class="project-info">
             <div class="client-name">Horror</div>
@@ -176,12 +178,12 @@
             <p>A piece built around contrast, ambience and logo integration, with a darker and more cinematic direction.</p>
             <div class="project-tags"><span class="tag">Visual Art</span><span class="tag">Sound Atmosphere</span><span class="tag">Editorial Tension</span></div>
             <div class="video-controls">
-              <button class="play" type="button" data-play>Play</button>
-              <button class="sound" type="button" data-sound>Enable Sound</button>
+              <button class="play" type="button" data-play data-cursor="Play">Play</button>
+              <button class="sound" type="button" data-sound data-cursor="Play with sound">Enable Sound</button>
               <span class="time">00:00</span>
             </div>
           </div>
-        </article><article class="project " data-reveal>
+        </article><article class="project " data-reveal data-cursor="View">
           <video src="assets/videos/into-t-1_5.mp4" muted playsinline preload="metadata" loop></video>
           <div class="project-info">
             <div class="client-name">Into This</div>
@@ -190,8 +192,8 @@
             <p>A fashion-led and design-driven approach where pattern becomes a composition system and a recognizable sign.</p>
             <div class="project-tags"><span class="tag">Visual Design</span><span class="tag">Brand Texture</span><span class="tag">Fashion Direction</span></div>
             <div class="video-controls">
-              <button class="play" type="button" data-play>Play</button>
-              <button class="sound" type="button" data-sound>Enable Sound</button>
+              <button class="play" type="button" data-play data-cursor="Play">Play</button>
+              <button class="sound" type="button" data-sound data-cursor="Play with sound">Enable Sound</button>
               <span class="time">00:00</span>
             </div>
           </div>
@@ -274,6 +276,49 @@
   <script>
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const introLoader = document.querySelector(".intro-loader");
+    const customCursor = document.querySelector(".custom-cursor");
+    if (customCursor && window.matchMedia("(pointer: fine)").matches && !prefersReduced) {
+      document.body.classList.add("cursor-enabled");
+      const cursorText = customCursor.querySelector("span");
+      const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      const target = { x: pos.x, y: pos.y };
+      const setCursorLabel = (label, light) => {
+        if (label) {
+          customCursor.classList.add("is-hover");
+          customCursor.classList.toggle("is-light", Boolean(light));
+          if (cursorText) cursorText.textContent = label;
+        } else {
+          customCursor.classList.remove("is-hover", "is-light");
+          if (cursorText) cursorText.textContent = "";
+        }
+      };
+      const tickCursor = () => {
+        pos.x += (target.x - pos.x) * 0.18;
+        pos.y += (target.y - pos.y) * 0.18;
+        customCursor.style.transform = "translate3d(" + pos.x + "px," + pos.y + "px,0) translate(-50%,-50%)";
+        window.requestAnimationFrame(tickCursor);
+      };
+      window.requestAnimationFrame(tickCursor);
+      window.addEventListener("pointermove", (event) => {
+        target.x = event.clientX;
+        target.y = event.clientY;
+        customCursor.classList.add("is-visible");
+      });
+      window.addEventListener("pointerdown", () => customCursor.classList.add("is-down"));
+      window.addEventListener("pointerup", () => customCursor.classList.remove("is-down"));
+      document.addEventListener("pointerover", (event) => {
+        const item = event.target.closest("[data-cursor],a,button");
+        if (!item) return;
+        const label = item.dataset.cursor || (item.tagName === "BUTTON" ? "Click" : "Go");
+        setCursorLabel(label, !item.closest(".hero,.project,.offers,.studio"));
+      });
+      document.addEventListener("pointerout", (event) => {
+        const item = event.target.closest("[data-cursor],a,button");
+        if (!item || item.contains(event.relatedTarget)) return;
+        setCursorLabel("");
+      });
+      window.addEventListener("pointerleave", () => customCursor.classList.remove("is-visible"));
+    }
     if (prefersReduced) {
       document.body.classList.remove("intro-lock");
       document.body.classList.add("site-ready");
