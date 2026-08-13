@@ -44,7 +44,7 @@
     .langs{justify-self:end;display:flex;gap:6px}.langs a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;min-height:34px;border:1px solid rgba(255,253,244,.45);border-radius:999px;background:rgba(18,16,13,.25);text-decoration:none;font-size:.72rem;text-transform:uppercase;color:var(--cream)}.langs .active{background:var(--cream);color:var(--ink);border-color:var(--cream)}
     .hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;border-bottom:1px solid var(--line);color:var(--cream);isolation:isolate}
     .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(18,16,13,.08) 0%,rgba(18,16,13,.14) 42%,rgba(18,16,13,.72) 100%),linear-gradient(90deg,rgba(18,16,13,.48) 0%,rgba(18,16,13,.1) 48%,rgba(18,16,13,.24) 100%);pointer-events:none}
-    .hero-copy{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(96px,12vh,160px) 0 clamp(24px,4vw,44px)}
+    .hero-copy{position:relative;z-index:2;width:min(calc(100% - 32px),var(--max));margin-inline:auto;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(96px,12vh,160px) 0 clamp(24px,4vw,44px)}
     .eyebrow,.label{margin:0;color:var(--muted);font-size:.78rem;line-height:1.65;letter-spacing:.04em;text-transform:uppercase}.hero .eyebrow{max-width:780px;color:rgba(255,253,244,.72);text-shadow:0 1px 14px rgba(0,0,0,.5)}
     h1{margin:22px 0;font-family:var(--display);font-size:clamp(3.05rem,6.3vw,7rem);font-weight:700;line-height:.94;letter-spacing:0;text-transform:none;max-width:12ch;text-wrap:balance;text-shadow:0 3px 24px rgba(0,0,0,.55)}
     .hero-intro{display:grid;grid-template-columns:minmax(0,420px) auto;gap:24px;align-items:end}.hero-intro p{max-width:420px;margin:0;font-family:var(--display);font-size:clamp(1rem,1.25vw,1.18rem);font-weight:600;line-height:1.22;color:rgba(255,253,244,.92);text-wrap:balance;text-shadow:0 2px 16px rgba(0,0,0,.55)}
@@ -100,7 +100,7 @@
     </nav>
   </header>
   <main id="top">
-    <section class="hero shell">
+    <section class="hero">
       <div class="hero-copy">
         <div>
           <p class="eyebrow">Paris • Identité sonore • Production musicale • Culture audio</p>
