@@ -15,7 +15,7 @@
     body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--mono);overflow-x:hidden}
     body::selection{background:var(--acid);color:var(--ink)}
     a{color:inherit}img,video{display:block;max-width:100%}button{font:inherit}
-    @media(pointer:fine){body.cursor-enabled,body.cursor-enabled a,body.cursor-enabled button,body.cursor-enabled .project{cursor:none}.custom-cursor{position:fixed;left:0;top:0;z-index:1000;width:18px;height:18px;border-radius:999px;background:var(--cream);border:1px solid rgba(18,16,13,.18);box-shadow:0 0 22px rgba(0,0,0,.18);pointer-events:none;opacity:0;transform:translate(-50%,-50%);transition:width .22s ease,height .22s ease,background .22s ease,border-color .22s ease,opacity .18s ease}.custom-cursor span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.88);opacity:0;color:var(--ink);font-family:var(--display);font-size:.68rem;font-weight:700;text-transform:uppercase;white-space:nowrap;transition:opacity .16s ease,transform .16s ease}.custom-cursor.is-visible{opacity:1}.custom-cursor.is-hover{width:78px;height:78px;background:rgba(255,253,244,.9);border-color:rgba(255,253,244,.6)}.custom-cursor.is-hover span{opacity:1;transform:translate(-50%,-50%) scale(1)}.custom-cursor.is-down{width:58px;height:58px}.custom-cursor.is-light{background:rgba(18,16,13,.86);border-color:rgba(18,16,13,.2)}.custom-cursor.is-light span{color:var(--cream)}}
+    @media(pointer:fine){body.cursor-enabled,body.cursor-enabled a,body.cursor-enabled button{cursor:none}.custom-cursor{position:fixed;left:0;top:0;z-index:1000;width:18px;height:18px;border-radius:999px;background:var(--cream);border:1px solid rgba(18,16,13,.18);box-shadow:0 0 22px rgba(0,0,0,.18);pointer-events:none;opacity:0;transform:translate(-50%,-50%);transition:width .22s ease,height .22s ease,background .22s ease,border-color .22s ease,opacity .18s ease}.custom-cursor span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.88);opacity:0;color:var(--ink);font-family:var(--display);font-size:.68rem;font-weight:700;text-transform:uppercase;white-space:nowrap;transition:opacity .16s ease,transform .16s ease}.custom-cursor.is-visible{opacity:1}.custom-cursor.is-hidden{opacity:0!important}.custom-cursor.is-hover{width:78px;height:78px;background:rgba(255,253,244,.9);border-color:rgba(255,253,244,.6)}.custom-cursor.is-hover span{opacity:1;transform:translate(-50%,-50%) scale(1)}.custom-cursor.is-down{width:58px;height:58px}.custom-cursor.is-light{background:rgba(18,16,13,.86);border-color:rgba(18,16,13,.2)}.custom-cursor.is-light span{color:var(--cream)}}
     .shell{width:min(calc(100% - 32px),var(--max));margin-inline:auto}
     body.intro-lock{overflow:hidden}
     .intro-loader{position:fixed;inset:0;z-index:999;display:grid;place-items:center;overflow:hidden;background:var(--ink);color:var(--cream);pointer-events:none}
@@ -55,13 +55,13 @@
     .hero-media::before,.hero-media::after{content:none}
     .media-badge{display:none}
     .showreel{position:absolute;inset:0;overflow:hidden;background:var(--ink);background-image:var(--poster);background-size:cover;background-position:center}
-    .showreel-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;filter:saturate(1.08) contrast(1.03);transform:scale(1.025);transition:opacity .75s ease,transform 2.8s ease}
+    .showreel-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;filter:saturate(1.12) contrast(1.06);transform:scale(1.025);transition:opacity .45s ease,transform 2.8s ease}
     .showreel-video.is-active.is-ready{opacity:1;transform:scale(1)}
     .showreel::after{content:none}
     .ticker{overflow:hidden;background:var(--ink);color:var(--cream);border-bottom:1px solid var(--line)}.ticker-track{display:flex;width:max-content;animation:marquee 24s linear infinite}.ticker span{padding:16px 18px;font-family:var(--display);font-size:clamp(1.05rem,2vw,2rem);font-weight:700;text-transform:uppercase;white-space:nowrap}
     section{scroll-margin-top:92px}.section-head{display:grid;grid-template-columns:.32fr minmax(0,1fr);gap:clamp(22px,4vw,56px);padding:clamp(42px,6vw,82px) 0 30px;border-bottom:1px solid var(--line)}.section-head>div{max-width:980px}
     h2{margin:0;font-family:var(--display);font-size:clamp(1.9rem,4.2vw,4.9rem);font-weight:700;line-height:1.02;text-transform:uppercase;text-wrap:balance;max-width:16ch}.section-head p:not(.label){max-width:760px;margin:22px 0 0;font-family:var(--display);font-size:clamp(1rem,1.32vw,1.22rem);font-weight:600;line-height:1.32;text-wrap:balance}
-    .work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;padding:16px 0 clamp(48px,8vw,110px)}.project{position:relative;min-height:620px;display:grid;align-content:end;overflow:hidden;color:var(--cream);background:var(--ink);background-image:var(--poster);background-size:cover;background-position:center;text-decoration:none;border:1px solid var(--ink)}.project.wide{grid-column:span 6}.project.tall{grid-column:span 4}.project:not(.wide):not(.tall){grid-column:span 4}.project video{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;filter:saturate(1.08) contrast(1.04);transition:transform .6s ease,opacity .3s ease,filter .3s ease}.project.has-video video{opacity:.9}.project:hover video{transform:scale(1.025);opacity:1;filter:saturate(1.12) contrast(1.06)}.project::after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(18,16,13,0) 0%,rgba(18,16,13,.02) 45%,rgba(18,16,13,.58) 100%)}
+    .work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;padding:16px 0 clamp(48px,8vw,110px)}.project{position:relative;min-height:620px;display:grid;align-content:end;overflow:hidden;color:var(--cream);background:var(--ink);background-image:var(--poster);background-size:cover;background-position:center;text-decoration:none;border:1px solid var(--ink)}.project.wide{grid-column:span 6}.project.tall{grid-column:span 4}.project:not(.wide):not(.tall){grid-column:span 4}.project video{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;filter:saturate(1.12) contrast(1.06);transition:transform .6s ease,opacity .3s ease,filter .3s ease}.project.has-video video{opacity:1}.project:hover video{transform:scale(1.025);opacity:1;filter:saturate(1.14) contrast(1.07)}.project::after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(18,16,13,0) 0%,rgba(18,16,13,0) 50%,rgba(18,16,13,.42) 100%)}
     .project-info{position:relative;z-index:2;display:grid;gap:10px;margin:clamp(10px,1.6vw,18px);padding:clamp(14px,2vw,22px);background:rgba(18,16,13,.58);border:1px solid rgba(255,253,244,.38);backdrop-filter:blur(7px);transition:background .25s ease,border-color .25s ease,backdrop-filter .25s ease}.client-name{width:max-content;max-width:100%;padding:8px 12px;background:var(--acid);color:var(--ink);font-family:var(--display);font-size:clamp(.95rem,1.42vw,1.28rem);font-weight:700;line-height:1;text-transform:uppercase;box-shadow:0 0 22px rgba(255,210,31,.36)}.project-meta{display:flex;flex-wrap:wrap;gap:8px;color:#fffdf4;font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em}.project h3{margin:0;max-width:18ch;color:#fffdf4;font-family:var(--display);font-size:clamp(1.35rem,2vw,2.55rem);font-weight:700;line-height:1;text-transform:uppercase;text-shadow:0 2px 14px rgba(0,0,0,.76)}.project p{max-width:560px;margin:0;color:#fffdf4;line-height:1.48;font-size:.9rem;text-shadow:0 1px 10px rgba(0,0,0,.72)}.project-tags{display:flex;flex-wrap:wrap;gap:6px}.tag{display:inline-flex;align-items:center;min-height:28px;padding:0 9px;border:1px solid rgba(255,253,244,.64);border-radius:999px;background:rgba(18,16,13,.34);color:#fffdf4;font-size:.62rem;text-transform:uppercase;letter-spacing:.05em}.project.is-playing .client-name,.project.is-playing .project-meta,.project.is-playing h3,.project.is-playing p,.project.is-playing .project-tags{display:none}.project.is-playing .project-info{background:transparent;border-color:transparent;backdrop-filter:none}.project.is-playing::after{background:transparent}.project.is-playing video{opacity:1;filter:saturate(1.08) contrast(1.04)}
     .video-controls{position:relative;z-index:3;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.video-controls button{min-height:40px;padding:0 13px;border:1px solid var(--cream);border-radius:999px;background:rgba(18,16,13,.78);color:#fffdf4;cursor:pointer;text-transform:uppercase;font-size:.68rem;font-weight:500;letter-spacing:.08em}.video-controls button.sound{background:var(--acid);color:var(--ink);border-color:var(--acid)}.video-controls .time{color:#fffdf4;font-size:.72rem}
     .native{display:none}
@@ -119,8 +119,8 @@
         </div>
       </div>
       <div class="hero-media" data-reveal>
-        <div class="showreel" aria-label="Silent video showreel" data-cursor="Showreel" style="--poster:url('assets/posters/project-01.svg')">
-          <video class="showreel-video is-active" src="assets/videos/obey-af-final-insta.mp4" poster="assets/posters/project-01.svg" autoplay muted playsinline webkit-playsinline preload="auto" loop></video><video class="showreel-video" src="assets/videos/waly-final.mp4" poster="assets/posters/project-02.svg" autoplay muted playsinline webkit-playsinline preload="auto" loop></video><video class="showreel-video" src="assets/videos/main-video-9x16.mp4" poster="assets/posters/project-03.svg" autoplay muted playsinline webkit-playsinline preload="auto" loop></video><video class="showreel-video" src="assets/videos/video-ho99o9.mp4" poster="assets/posters/project-04.svg" autoplay muted playsinline webkit-playsinline preload="auto" loop></video><video class="showreel-video" src="assets/videos/into-t-1_5.mp4" poster="assets/posters/project-05.svg" autoplay muted playsinline webkit-playsinline preload="auto" loop></video>
+        <div class="showreel" aria-label="Silent video showreel">
+          <video class="showreel-video is-active" src="assets/videos/obey-af-final-insta.mp4" autoplay muted playsinline webkit-playsinline preload="auto" loop></video><video class="showreel-video" src="assets/videos/waly-final.mp4" autoplay muted playsinline webkit-playsinline preload="auto" loop></video><video class="showreel-video" src="assets/videos/main-video-9x16.mp4" autoplay muted playsinline webkit-playsinline preload="auto" loop></video><video class="showreel-video" src="assets/videos/video-ho99o9.mp4" autoplay muted playsinline webkit-playsinline preload="auto" loop></video><video class="showreel-video" src="assets/videos/into-t-1_5.mp4" autoplay muted playsinline webkit-playsinline preload="auto" loop></video>
         </div>
       </div>
     </section>
@@ -130,8 +130,8 @@
     <section id="work" class="shell">
       <div class="section-head" data-reveal><p class="label">Projets</p><div><h2>Une sélection de projets où le son devient un actif de marque.</h2><p>Chaque vidéo explore une manière de rendre une marque, un contenu ou une expérience plus reconnaissable par le son, la texture et le rythme.</p></div></div>
       <div class="work-grid">
-        <article class="project wide" data-reveal data-cursor="Voir" style="--poster:url('assets/posters/project-01.svg')">
-          <video src="assets/videos/obey-af-final-insta.mp4" poster="assets/posters/project-01.svg" muted playsinline preload="auto" loop></video>
+        <article class="project wide" data-reveal>
+          <video src="assets/videos/obey-af-final-insta.mp4" muted playsinline webkit-playsinline preload="auto" loop></video>
           <div class="project-info">
             <div class="client-name">OBEY x Almost Free Services</div>
             <div class="project-meta"><span>01</span><span>OBEY x Almost Free Services • Composition originale / Sound design</span></div>
@@ -144,8 +144,8 @@
               <span class="time">00:00</span>
             </div>
           </div>
-        </article><article class="project wide" data-reveal data-cursor="Voir" style="--poster:url('assets/posters/project-02.svg')">
-          <video src="assets/videos/waly-final.mp4" poster="assets/posters/project-02.svg" muted playsinline preload="auto" loop></video>
+        </article><article class="project wide" data-reveal>
+          <video src="assets/videos/waly-final.mp4" muted playsinline webkit-playsinline preload="auto" loop></video>
           <div class="project-info">
             <div class="client-name">Extended Family</div>
             <div class="project-meta"><span>02</span><span>Extended Family • Direction sonore / Motion</span></div>
@@ -158,8 +158,8 @@
               <span class="time">00:00</span>
             </div>
           </div>
-        </article><article class="project " data-reveal data-cursor="Voir" style="--poster:url('assets/posters/project-03.svg')">
-          <video src="assets/videos/main-video-9x16.mp4" poster="assets/posters/project-03.svg" muted playsinline preload="auto" loop></video>
+        </article><article class="project " data-reveal>
+          <video src="assets/videos/main-video-9x16.mp4" muted playsinline webkit-playsinline preload="auto" loop></video>
           <div class="project-info">
             <div class="client-name">HOKA</div>
             <div class="project-meta"><span>03</span><span>HOKA • Campaign Audio / Brand Asset</span></div>
@@ -172,8 +172,8 @@
               <span class="time">00:00</span>
             </div>
           </div>
-        </article><article class="project tall" data-reveal data-cursor="Voir" style="--poster:url('assets/posters/project-04.svg')">
-          <video src="assets/videos/video-ho99o9.mp4" poster="assets/posters/project-04.svg" muted playsinline preload="auto" loop></video>
+        </article><article class="project tall" data-reveal>
+          <video src="assets/videos/video-ho99o9.mp4" muted playsinline webkit-playsinline preload="auto" loop></video>
           <div class="project-info">
             <div class="client-name">Horror</div>
             <div class="project-meta"><span>04</span><span>Horror • Visual Art / Sound Atmosphere</span></div>
@@ -186,8 +186,8 @@
               <span class="time">00:00</span>
             </div>
           </div>
-        </article><article class="project " data-reveal data-cursor="Voir" style="--poster:url('assets/posters/project-05.svg')">
-          <video src="assets/videos/into-t-1_5.mp4" poster="assets/posters/project-05.svg" muted playsinline preload="auto" loop></video>
+        </article><article class="project " data-reveal>
+          <video src="assets/videos/into-t-1_5.mp4" muted playsinline webkit-playsinline preload="auto" loop></video>
           <div class="project-info">
             <div class="client-name">Into This</div>
             <div class="project-meta"><span>05</span><span>Into This • Graphisme mode / Texture de marque</span></div>
@@ -310,12 +310,21 @@
       window.addEventListener("pointerdown", () => customCursor.classList.add("is-down"));
       window.addEventListener("pointerup", () => customCursor.classList.remove("is-down"));
       document.addEventListener("pointerover", (event) => {
+        if (event.target.closest(".showreel,.project,video")) {
+          customCursor.classList.add("is-hidden");
+          setCursorLabel("");
+          return;
+        }
+        customCursor.classList.remove("is-hidden");
         const item = event.target.closest("[data-cursor],a,button");
         if (!item) return;
         const label = item.dataset.cursor || (item.tagName === "BUTTON" ? "Cliquer" : "Aller");
         setCursorLabel(label, !item.closest(".hero,.project,.offers,.studio"));
       });
       document.addEventListener("pointerout", (event) => {
+        if (event.target.closest(".showreel,.project,video") && !event.relatedTarget?.closest?.(".showreel,.project,video")) {
+          customCursor.classList.remove("is-hidden");
+        }
         const item = event.target.closest("[data-cursor],a,button");
         if (!item || item.contains(event.relatedTarget)) return;
         setCursorLabel("");
@@ -409,6 +418,21 @@
       const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
       return mins + ":" + secs;
     };
+    const setVideoFramePoster = (video, card) => {
+      if (!video.videoWidth || !video.videoHeight || card.dataset.framePoster === "1") return;
+      try {
+        const canvas = document.createElement("canvas");
+        canvas.width = 900;
+        canvas.height = 1125;
+        const context = canvas.getContext("2d");
+        const scale = Math.max(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
+        const width = video.videoWidth * scale;
+        const height = video.videoHeight * scale;
+        context.drawImage(video, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
+        card.style.setProperty("--poster", "url('" + canvas.toDataURL("image/jpeg", 0.82) + "')");
+        card.dataset.framePoster = "1";
+      } catch {}
+    };
     cards.forEach((card) => {
       const preview = card.querySelector(":scope > video");
       const native = preview;
@@ -416,8 +440,14 @@
       const soundButton = card.querySelector("[data-sound]");
       const time = card.querySelector(".time");
       if (!preview || !playButton || !soundButton) return;
-      preview.addEventListener("loadeddata", () => card.classList.add("has-video"), { once: true });
-      preview.addEventListener("canplay", () => card.classList.add("has-video"), { once: true });
+      preview.addEventListener("loadeddata", () => {
+        card.classList.add("has-video");
+        setVideoFramePoster(preview, card);
+      }, { once: true });
+      preview.addEventListener("canplay", () => {
+        card.classList.add("has-video");
+        setVideoFramePoster(preview, card);
+      }, { once: true });
 
       const sync = () => {
         const target = native.paused ? preview : native;
